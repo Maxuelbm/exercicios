@@ -3,9 +3,9 @@ Q.04:
 
 Inicio
 n=1
-enquanto n!=0 fa�a
+enquanto n!=0 faça
 	leia n
-	se n>0 ent�o
+	se n>0 então
 		soma = soma+n
 	fim_se
 fim_enquanto
@@ -18,30 +18,77 @@ while (n!=0):
     n=float(input('Digite qualquer valor, e 0 para encerrar o programa: '))
     if (n>0):
         soma = soma+n
-print('A soma dos valores positivos �: ',soma)
+print('A soma dos valores positivos é: ',soma)
 
-Lista 05.
+Questão 05:
 
+início
+receba um número
+maior<-n
+menor<-n
+verificador <- true
+enquanto verificador = true faça
+	se n !=0 então
+		se n> maior
+			maior <- n
+		se n < menor
+			menor <- n
+		fim_se
+		fim_se
+	senão
+		verificador = false
+	fim_se
+fim_enquanto
+escreva valor maior
+escreva valor menor
+fim_programa
+===========================================
+Questão 06
+
+inicio
 n=1
-maior=0.0
-menor=0.0
-while (n!=0):
-    n=float(input('Digite qualquer valor, e 0 para encerrar o programa: '))
-    if (n!=0):
-        if (n>maior):
-            maior = n
-        else :
-            menor = n
-print('O valor maior �: ',maior)
-print('O valor menor �: ',menor)
-=======================================
-n=1
-while (n!=0):
-    n=float(input('Digite qualquer valor, e 0 para encerrar o programa: '))
-    if (n!=0):
-        maior = n
-        if (n<maior):
-            menor = n
-print('O valor maior �: ',maior)
-print('O valor menor �: ',menor)
+somaP = 0
+somaI = 0
+enquanto n !=0 faça
+	receba n
+	se resto de n = 0 então
+		somaP=somaP+n
+	senão
+		somaI=somaI+n
+	fim_se
+fim_equanto
+escreva somaP
+escreva somaI
+fim_programa
+===========================================
+Questão 07
+
+inicio
+leia n
+se n <=0 então
+	não existe fatorial de 0
+senão
+	se n=1 então
+		escreva = fatorial é 1
+	senão
+		fat<-n
+		para i de 1 até n-1 faça
+			fat= fat*(n-i)
+		fim_para
+		escreva fat
+	fim_se
+fim_se
+fim_programa
+==========================================
+Questão 08
+
+Inicio
+leia n
+anterior<-1
+atual<-1
+
+escreva
+f<-0
+para i de 1 até n faça
+	f<-f+(f+1)
 
