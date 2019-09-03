@@ -1,0 +1,73 @@
+Questão 01:
+
+contador = 1
+qt_maiores = 0
+while contador<=10 :
+    idade = int(input('Digie a sua idade: '))
+    if (idade>0):
+        contador += 1
+        if (idade>=18):
+            qt_maiores +=1
+print (qt_maiores)
+
+Questão 02:
+
+contador = 1
+while contador <=10:
+    numero = float(input('Digite um numero: '))
+    if numero % 2 == 0:
+        print (numero)
+    contador += 1
+
+Questão 03:
+
+qt_h = 0
+qt_m = 0
+soma_h = 0
+soma_m = 0
+
+while qt_h + qt_m <=10 :
+    idade = int(input('Digite a sua idade: '))
+    sexo = input('Digite o seu sexo: ')
+    if (idade>0):
+        if (sexo== 'H'):
+            qt_h +=1
+            soma_h = soma_h + idade
+        else:
+            qt_m +=1
+            soma_m = soma_m + idade
+media_h = soma_h/qt_h
+media_m = soma_m/qt_m
+media_t = (soma_h+soma_m)/10
+print('A media de idade total é: ',media_t)
+print('A media de idade dos homens é: ',media_h)
+print('A media de idade das mulheres é: ',media_m)
+
+Quetão 04:
+
+n = 1
+soma = 0
+while n!=0 :
+    n = float(input('Digite um numero: '))
+    if (n>0):
+        soma = soma+n
+print('A soma dos valores é: ', soma)
+
+Questão 05:
+
+numero = float(input('Digite um numero: '))
+maior = numero
+menor = numero
+leitura = True
+while leitura==True : 
+    numero = float(input('Digite um numero: '))
+    if (numero == 0):
+        leitura = False
+    elif (numero>maior):
+        maior = numero
+    elif (numero<menor):
+        menor = numero
+print ('O numero maior é ', maior)
+print ('O numero menor é ', menor)  
+
+Questão 06:
