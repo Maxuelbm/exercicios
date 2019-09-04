@@ -71,3 +71,52 @@ print ('O numero maior é ', maior)
 print ('O numero menor é ', menor)  
 
 Questão 06:
+
+soma_par = 0
+soma_impar = 0
+leitura = True
+while leitura==True :
+    numero = int(input('Digite um numero: '))
+    if (numero == 0):
+        leitura = False
+    else:
+        if(numero % 2 == 0):
+            soma_par = soma_par+numero
+        else:
+            soma_impar = soma_impar+numero
+print('A soma dos numeros pares e: ',soma_par)
+print('A soma dos numeros impares e: ',soma_impar)
+
+Questão 07:
+
+valor = int(input('Digite um valor'))
+if (valor == 1):
+    print('O valor do fatorial de 1 é 1')
+else:
+    if(valor<0):
+        print('Não existe fatorial de número negativo')
+    else:
+        fatorial = valor
+        while valor>1:
+            valor = valor-1
+            fatorial = fatorial*valor
+        print('O fatorial do valor é', fatorial)
+
+Questão 08:
+numero = int(input('Digite um valor '))
+
+anterior = 1
+atual = 1
+
+print(anterior)
+print(atual)
+
+posição = 3
+
+while posição<=numero:
+    proximo = anterior+atual
+    print(proximo)
+    aterior = atual
+    atual = proximo
+    posição +=1
+
