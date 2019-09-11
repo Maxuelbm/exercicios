@@ -1,0 +1,12 @@
+soma_idade15 = 0
+for i in range(5):
+    idade = int(input('Digite a sua idade'))
+    if (idade<=0):
+        print('idade invalidade')
+    else:
+        if(idade<=15):
+            soma_idade15 += idade
+        elif(idade):
+            
+    i +=1
+print (lista_idade)
