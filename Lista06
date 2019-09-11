@@ -1,12 +1,47 @@
-soma_idade15 = 0
+t15 = 0
+t30 = 0
+t45 = 0
+t60 = 0
+tm60 = 0
+lista_idade15 = []
+lista_idade30 = []
+lista_idade45 = []
+lista_idade60 = []
+lista_idadem60 = []
 for i in range(5):
-    idade = int(input('Digite a sua idade'))
+    idade = int(input('Digite a sua idade '))
     if (idade<=0):
         print('idade invalidade')
     else:
         if(idade<=15):
-            soma_idade15 += idade
-        elif(idade):
-            
-    i +=1
-print (lista_idade)
+            lista_idade15.append(idade)
+        elif(idade<=30):
+            lista_idade30.append(idade)
+        elif(idade<=45):
+            lista_idade45.append(idade)
+        elif(idade<=60):
+            lista_idade60.append(idade)
+        else:
+            lista_idadem60.append(idade)
+    i += 1
+for i15 in lista_idade15:
+    t15 += 1
+for i30 in lista_idade30:
+    t30 += 1
+for i45 in lista_idade45:
+    t45 += 1
+for i60 in lista_idade60:
+    t60 += 1
+for im60 in lista_idadem60:
+    tm60 += 1
+p15 = t15*100/5
+p30 = t30*100/5
+p45 = t45*100/5
+p60 = t60*100/5
+pm60 = tm60*100/5
+print('FAIXA ETARIA', '{0:^23}'.format('TOTAL'), '{0:<9}'.format('%'))
+print('Até 15 anos', '{0:.^21}'.format(t15), '{0:.>8}'.format(p15))
+print('De 16 a 30 anos', '{0:.^14}'.format(t30), '{0:.>10}'.format(p30))
+print('De 31 a 45 anos', '{0:.^14}'.format(t45), '{0:.>10}'.format(p45))
+print('De 46 a 60 anos', '{0:.^14}'.format(t60), '{0:.>10}'.format(p60))
+print('Acima de 60 anos', '{0:.^12}'.format(tm60), '{0:.>10}'.format(pm60))
