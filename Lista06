@@ -1,47 +1,33 @@
-t15 = 0
-t30 = 0
-t45 = 0
-t60 = 0
-tm60 = 0
-lista_idade15 = []
-lista_idade30 = []
-lista_idade45 = []
-lista_idade60 = []
-lista_idadem60 = []
+lista_idade = [0,0,0,0,0]
+posicao = 0
+total = 0
 for i in range(5):
     idade = int(input('Digite a sua idade '))
     if (idade<=0):
         print('idade invalidade')
     else:
         if(idade<=15):
-            lista_idade15.append(idade)
+            lista_idade[0] += 1
         elif(idade<=30):
-            lista_idade30.append(idade)
+            lista_idade[1] += 1
         elif(idade<=45):
-            lista_idade45.append(idade)
+            lista_idade[2] += 1
         elif(idade<=60):
-            lista_idade60.append(idade)
+            lista_idade[3] += 1
         else:
-            lista_idadem60.append(idade)
+            lista_idade[4] += 1
     i += 1
-for i15 in lista_idade15:
-    t15 += 1
-for i30 in lista_idade30:
-    t30 += 1
-for i45 in lista_idade45:
-    t45 += 1
-for i60 in lista_idade60:
-    t60 += 1
-for im60 in lista_idadem60:
-    tm60 += 1
-p15 = t15*100/5
-p30 = t30*100/5
-p45 = t45*100/5
-p60 = t60*100/5
-pm60 = tm60*100/5
-print('FAIXA ETARIA', '{0:^23}'.format('TOTAL'), '{0:<9}'.format('%'))
-print('Até 15 anos', '{0:.^21}'.format(t15), '{0:.>8}'.format(p15))
-print('De 16 a 30 anos', '{0:.^14}'.format(t30), '{0:.>10}'.format(p30))
-print('De 31 a 45 anos', '{0:.^14}'.format(t45), '{0:.>10}'.format(p45))
-print('De 46 a 60 anos', '{0:.^14}'.format(t60), '{0:.>10}'.format(p60))
-print('Acima de 60 anos', '{0:.^12}'.format(tm60), '{0:.>10}'.format(pm60))
+for j in range(len(lista_idade)):
+    total += lista_idade[posicao]
+    posicao += 1
+p15 = lista_idade[0]*100/5
+p30 = lista_idade[1]*100/5
+p45 = lista_idade[2]*100/5
+p60 = lista_idade[3]*100/5
+pm60 = lista_idade[4]*100/5
+print('{0:<20} {1:^15} {2:>10}'.format('FAIXA ETÁRIA', 'TOTAL', '%'))
+print('{0:<20} {1:^15} {2:>10}'.format('Até 15 anos', lista_idade[0], p15))
+print('{0:<20} {1:^15} {2:>10}'.format('De 15 a 30 anos', lista_idade[1], p30))
+print('{0:<20} {1:^15} {2:>10}'.format('De 31 a 45 anos', lista_idade[2], p45))
+print('{0:<20} {1:^15} {2:>10}'.format('De 46 a 60 anos', lista_idade[3], p60))
+print('{0:<20} {1:^15} {2:>10}'.format('Acima de 60 anos', lista_idade[4], pm60))
