@@ -20,14 +20,14 @@ for i in range(15):
 for j in range(len(lista_idade)):
     total += lista_idade[posicao]
     posicao += 1
-p15 = lista_idade[0]*100/5
-p30 = lista_idade[1]*100/5
-p45 = lista_idade[2]*100/5
-p60 = lista_idade[3]*100/5
-pm60 = lista_idade[4]*100/5
+p15 = lista_idade[0]*100/15
+p30 = lista_idade[1]*100/15
+p45 = lista_idade[2]*100/15
+p60 = lista_idade[3]*100/15
+pm60 = lista_idade[4]*100/15
 print('{0:<20} {1:^15} {2:>10}'.format('FAIXA ETÁRIA', 'TOTAL', '%'))
-print('{0:<20} {1:^15} {2:>10}'.format('Até 15 anos', lista_idade[0], p15))
-print('{0:<20} {1:^15} {2:>10}'.format('De 15 a 30 anos', lista_idade[1], p30))
-print('{0:<20} {1:^15} {2:>10}'.format('De 31 a 45 anos', lista_idade[2], p45))
-print('{0:<20} {1:^15} {2:>10}'.format('De 46 a 60 anos', lista_idade[3], p60))
-print('{0:<20} {1:^15} {2:>10}'.format('Acima de 60 anos', lista_idade[4], pm60))
+print('{0:<20} {1:^15} {2:>10,.1f}'.format('Até 15 anos', lista_idade[0], p15))
+print('{0:<20} {1:^15} {2:>10,.1f}'.format('De 15 a 30 anos', lista_idade[1], p30))
+print('{0:<20} {1:^15} {2:>10,.1f}'.format('De 31 a 45 anos', lista_idade[2], p45))
+print('{0:<20} {1:^15} {2:>10,.1f}'.format('De 46 a 60 anos', lista_idade[3], p60))
+print('{0:<20} {1:^15} {2:>10,.1f}'.format('Acima de 60 anos', lista_idade[4], pm60))
