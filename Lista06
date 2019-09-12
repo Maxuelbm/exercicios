@@ -1,7 +1,7 @@
 lista_idade = [0,0,0,0,0]
 posicao = 0
 total = 0
-for i in range(5):
+for i in range(15):
     idade = int(input('Digite a sua idade '))
     if (idade<=0):
         print('idade invalidade')
