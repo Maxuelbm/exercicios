@@ -34,18 +34,34 @@ print('{0:<20} {1:^15} {2:>10,.1f}'.format('De 46 a 60 anos', lista_idade[3], p6
 print('{0:<20} {1:^15} {2:>10,.1f}'.format('Acima de 60 anos', lista_idade[4], pm60))
 
 #QUESTÃO 02
-valor = float(input('Digie um valor'))
+#Recebe o valor e declara as duas listas
+valor = float(input('Digie um valor: '))
 cedulas = [0,0,0,0,0,0,0,0,0,0,0,0]
-valores = [100,50,20,10,5,2,1,0.5,0.25,0.10,0.05,0.01]
-c1 = 0
-c2 = 0
+valores = [100,50,20,10,5,2,1,0.50,0.25,0.10,0.05,0.01]
 
-if (valor<=0):
+if (valor<=0): 
     print('Valor inválido')
 else:
+    valor = int(valor*100)   # multiplicar por 100 para eliminar as casas decimais e definir como inteiro a variável valor
+    for i in range(len(valores)):  # Multiplicar cada item da lista também por 100
+        valores[i] = valores[i]* 100
+        i +=1
+        
+    c1 = 0 # Contador para varrer lista
     while valor>0:
-        cedulas[c1] =  valor // valores[c1]
-        valor = valor % valores[c1]
+        cedulas[c1] =  valor // valores[c1]  # Lista de cedulas recebe a quatidade inteira de cada divisão
+        valor = (valor % valores[c1])  # Valor se torna o restod a divisão
         c1 +=1
-print (cedulas)
-print (valores)
+
+    for j in range(len(valores)):  # For para retornar as duas casas decimais dos valores.
+        valores[j] = valores[j] / 100
+        j +=1
+
+    print('Para o valor informado, será necessário: ')
+    print('{0:<25}'.format('NOTA(S) / MOEDA(S)'),'R$')
+    
+    c2 = 0 #Novo contador para imprimir os resultados da lista
+    while c2<12:
+        cedulas[c2] = int(cedulas[c2])
+        print('{0:.<25}'.format(cedulas[c2]), valores[c2])
+        c2 += 1
