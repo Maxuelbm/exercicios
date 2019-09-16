@@ -65,3 +65,26 @@ else:
         cedulas[c2] = int(cedulas[c2])
         print('{0:.<25}'.format(cedulas[c2]), valores[c2])
         c2 += 1
+        
+ #QUESTÃO 03
+ 
+lista_matriculas = []
+lista_notas = []
+lista_media = []
+alunos = int(input('Digite a quantidade de alunos: '))
+
+if (alunos<=0):
+    print('Valor invalido')
+else:
+    for i in range(alunos):
+        matriculas = int(input('Digite a matricula do aluno: '))
+        lista_matriculas.append(matriculas)
+        nota1 = float(input('Digite a primeira nota do aluno: '))
+        nota2 = float(input('Digite a segunda nota: '))
+        lista_notas.append([nota1, nota2])
+    g = 0
+    for j in range(len(lista_matriculas))
+        for k in range(len(lista_notas))
+            media = lista_notas[[g]] + lista_notas[g+1]
+            k += 1
+        print
