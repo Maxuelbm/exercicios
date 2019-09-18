@@ -1,0 +1,20 @@
+#Questão 03
+
+x = float(input('Digite o valor de x: '))
+y = float(input('Digite o valor de y: '))
+
+if (x == 0 and y == 0):
+    print ('Ponto de origem')
+elif (x == 0):
+    print ('Ponto no eixo y')
+elif (y == 0):
+    print('Ponto no eixo x')
+else:
+    if (x > 0 and y > 0):
+        print ('Primeiro quadrante')
+    elif (x > 0 and y < 0):
+        print ('Quarto quadrante')
+    elif (x < 0 and y > 0):
+        print ('Segundo quadrante')
+    else:
+        print ('Terceiro quadrante')
