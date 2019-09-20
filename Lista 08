@@ -18,3 +18,33 @@ else:
         print ('Segundo quadrante')
     else:
         print ('Terceiro quadrante')
+
+#Questão 04
+
+valor = input('Digite um valor ').upper()
+invertido = ''
+
+for x in valor:
+    invertido = x + invertido
+if invertido == valor:
+    print('{0} é Plalindromo'.format(valor))
+else:
+    print('{0} Não é palindromo'.format(valor))
+    
+# Questão 05:
+
+height = 5
+width = 4
+contador = 1
+while contador <= height:
+    print('*'*width)
+    contador +=1
+# Questão 03:
+
+vogais = 'aeiouáéíóúãõ'
+frase = input('Digite uma frase ').lower()
+contador = 0
+for x in frase:
+    if (x in vogais):
+        contador += 1
+print ('A frase possui {0} vogais'.format(contador))
