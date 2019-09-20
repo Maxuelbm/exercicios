@@ -48,3 +48,33 @@ for x in frase:
     if (x in vogais):
         contador += 1
 print ('A frase possui {0} vogais'.format(contador))
+
+# Questão 06:
+
+cpf = input('Digite o seu cpf ')
+lista_cpf = []
+t = 0
+for i in range(0, 9):
+    lista_cpf.append(int(cpf[i])*(10-i))
+for x in range(len(lista_cpf)):
+    t += lista_cpf[x]
+v1 = 11 - (t % 11)
+if v1 >= 10:
+    v1 = 0
+
+if v1 == int(cpf [9]):
+    lista_cpf = []
+    t = 0
+    for k in range(0, 10):
+        lista_cpf.append(int(cpf[k])*(11-k))
+    for y in range(len(lista_cpf)):
+        t += lista_cpf[y]
+    v2 = 11 - (t % 11)
+    if v2 >= 10:
+        v2 = 0
+    if v2 == int(cpf[10]):
+        print('CPF válido')
+    else:
+        print('CPF inválido')
+else:
+    print('Cpf inválido')
